@@ -162,4 +162,4 @@ cython_debug/
 #.idea/
 pyvenv.cfg
 
-bin
+fastapi-env
