@@ -5,8 +5,8 @@ from pydantic import BaseModel
 
 
 class Blog(BaseModel):
-    name: str
-    description: str
+    title: str
+    body: str
     published: bool
 
 
