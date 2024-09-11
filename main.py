@@ -1,6 +1,14 @@
 from fastapi import FastAPI
 
 from typing import Optional
+from pydantic import BaseModel
+
+
+class Blog(BaseModel):
+    name: str
+    description: str
+    published: bool
+
 
 app = FastAPI()
 
@@ -14,8 +22,8 @@ def index(limit = 10, published: bool = True, sort: Optional[str] = None):
 
 
 @app.post('/blog')
-def create_blog():
-    return {'data': 'Blog is created'}
+def create_blog(request: Blog):
+    return {'data': f'Blog {request} is created'}
 
 
 
