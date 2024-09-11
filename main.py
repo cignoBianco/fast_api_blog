@@ -15,6 +15,6 @@ def show(id: int):
 
 
 @app.get('/blog/{id}/comments')
-def comments(id):
+def comments(id: int):
     # fetch comment of blog with id = id
     return {'data': {'comments': {'1', '2'}}}
