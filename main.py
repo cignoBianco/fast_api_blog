@@ -12,3 +12,9 @@ def index():
 def show(id):
     # fetch blog with id = id
     return {'data': id}
+
+
+@app.get('/blog/{id}/comments')
+def comments(id):
+    # fetch comment of blog with id = id
+    return {'data': {'comments': {'1', '2'}}}
