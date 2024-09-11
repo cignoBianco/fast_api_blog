@@ -5,5 +5,5 @@ app = FastAPI()
 
 @app.get('/')
 def index():
-    return 'hello world'
+    return {'data': {'name': 'Anastasia'}}
 
