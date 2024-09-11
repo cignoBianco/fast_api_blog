@@ -22,8 +22,8 @@ def index(limit = 10, published: bool = True, sort: Optional[str] = None):
 
 
 @app.post('/blog')
-def create_blog(request: Blog):
-    return {'data': f'Blog {request} is created'}
+def create_blog(blog: Blog):
+    return {'data': f'Blog {blog.title} is created'}
 
 
 
