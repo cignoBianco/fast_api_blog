@@ -13,6 +13,12 @@ def index(limit = 10, published: bool = True, sort: Optional[str] = None):
         return {'data': f'{limit} unpublished blogs list from the db'}
 
 
+@app.post('/blog')
+def create_blog():
+    return {'data': 'Blog is created'}
+
+
+
 @app.get('/blog/unpublished')
 def unpublished():
     return {'data': 'all unpublished blogs'}
